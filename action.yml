@@ -1,17 +1,20 @@
 name: 'IBM Cloud CLI'
 description: 'Install and configure IBM Cloud CLI to talk to IBM Cloud'
 inputs:
-  APIKEY: # APIKEY
+  APIKEY:
     description: 'Your API key to access IBM Cloud'
     required: true
-  CLOUD_REGION: # REGION
+  CLOUD_REGION:
     description: 'The region to access IBM Cloud'
     required: false
     default: 'us-south'
-  RESOURCE_GROUP: # RESOURCE GROUP
+  RESOURCE_GROUP:
     description: 'The resource group to access IBM Cloud'
     required: false
     default: 'Default'
+  IMAGE_TAG:
+    description: 'The image tag to build'
+    required: true
 
 runs:
   using: 'docker'
@@ -20,6 +23,7 @@ runs:
     - ${{ inputs.APIKEY }}
     - ${{ inputs.CLOUD_REGION }}
     - ${{ inputs.RESOURCE_GROUP }}
+    - ${{ inputs.IMAGE_TAG }}
 
 branding:
   icon: 'upload-cloud'  
