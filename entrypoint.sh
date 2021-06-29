@@ -5,6 +5,6 @@ ibmcloud --version
 ibmcloud config --check-version=false
 ibmcloud plugin install -f kubernetes-service
 ibmcloud plugin install -f container-registry
-ibmcloud login --apikey "$1" -r "$2" -g default
+ibmcloud login --apikey "$1" -r "$2" -g Default
 ibmcloud cr region-set "$2"
 ibmcloud cr login
