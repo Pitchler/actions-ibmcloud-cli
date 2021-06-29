@@ -8,6 +8,10 @@ inputs:
     description: 'The region to access IBM Cloud'
     required: false
     default: 'us-south'
+  RESOURCE_GROUP: # RESOURCE GROUP
+    description: 'The resource group to access IBM Cloud'
+    required: false
+    default: 'Default'
 
 runs:
   using: 'docker'
@@ -15,6 +19,7 @@ runs:
   args:
     - ${{ inputs.APIKEY }}
     - ${{ inputs.CLOUD_REGION }}
+    - ${{ inputs.RESOURCE_GROUP }}
 
 branding:
   icon: 'upload-cloud'  
