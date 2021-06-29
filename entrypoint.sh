@@ -1,6 +1,6 @@
 #!/bin/sh -l
 
-curl -fsSL https://clis.cloud.ibm.com/install/linux | sh
+#curl -fsSL https://clis.cloud.ibm.com/install/linux | sh
 ibmcloud --version
 ibmcloud config --check-version=false
 ibmcloud plugin install -f kubernetes-service
