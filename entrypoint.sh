@@ -8,6 +8,6 @@ ibmcloud plugin install -f container-registry
 ibmcloud login --apikey "$1" -r "$2" -g "$3"
 ibmcloud cr region-set "$2"
 ibmcloud cr login
-echo "-----tag"
-echo "$4"
-docker build --tag "$4" .
+#echo "-----tag"
+#echo "$4"
+#docker build --tag "$4" .
